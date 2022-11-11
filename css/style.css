@@ -2,21 +2,34 @@
 
 body{
 
-    background: #999B9E;
+    background: #1D2128;
+    ;
  }
  *{
     font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
  }
  .container{
-    margin: 80px;
+    margin: 32px 0;
     text-align: center;
-    display:flex;
-    flex-direction:row;
+    /* display:flex;
     justify-content:space-around;
-    flex-wrap: wrap;
+    flex-wrap: wrap; */
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2rem;
  }
+
+ /* .briefcase-summary__header {
+   margin-bottom: 3rem;
+   text-align: center;
+ } */
  
+ .briefcase-summary__content {
+   display: grid;
+   grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+   gap: 2rem;
+ }
  
  h1{
     text-align: center;
@@ -27,15 +40,14 @@ body{
  .nota{
     background-color: yellow;
     border: 1px solid white;
-    height: 200px;
+    height: 260px;
     /*width: 200px;*/
     border-radius: 20px;
     font-weight: 400;
-    font-size: 24px;
-   
-    position: relative;
+    /* position: relative; */
+    /*font-size: 24px;
     width: 17%;
-    margin: 30px;
+    margin: 30px; */
  }
   
  textarea{
@@ -53,21 +65,11 @@ form{
     align-items: center;
 }
 
-form button{
-    color: white;
-    margin: 0px;
-    width: 220px;
-    height: 50px;
-    background: #4F4F4F;
-    border-radius: 16px;
-    /* position: relative;
-    top: 40px;
-    left: -240px;
-    gap: 8px;
-    position:relative;
-    left: -130px;
-     */
-   
+ button{
+    border-radius: 16px white;
+    all: unset;
+    cursor: pointer;
+    padding:.2rem ;
  }
 
  .input{
@@ -79,10 +81,10 @@ form button{
 
  .nota button{
    color: gray;
-    position: absolute;
-    bottom: -40px;
+    /* position: absolute; */
+    /* bottom: -40px;
     left: 0;
-    right: 0;
+    right: 0; */
     border-radius: 16px;
  }
  .container-notas{
@@ -99,4 +101,23 @@ form button{
  }
  .main{
   width: 100%;
+ }
+ .hidden{
+    display: none;
+ }
+
+ .input__footer{
+   display: flex;
+   justify-content: space-between;
+ }
+
+ svg{
+   width: 2.25rem;
+   height: 2.25rem;
+ }
+ .main__notes{
+   padding: 1.5rem 4rem;
+ }
+ header{
+   height: 4.375rem;
  }
