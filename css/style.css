@@ -3,7 +3,6 @@
 body{
 
     background: #1D2128;
-    ;
  }
  *{
     font-family: 'Roboto', sans-serif;
@@ -40,13 +39,21 @@ body{
     margin: 30px; */
  }
   
- textarea{
+ textarea, .title-notes{
     resize: none;
     border: none;
     outline: none;
-    width: 580px;
-    text-align: center;
-    font-size: 24px;
+}
+textarea{
+   width: 580px;
+   height: 50px;
+   text-align: center;
+   font-size: 24px;
+}
+
+.title-notes{
+   width: 580px;
+   font-size: 1.1rem;
 }
 
 form{
@@ -85,9 +92,10 @@ form{
  
  .section{
     display: flex;
+    height: 100vh;
  }
  .lateral{
-    width: 352px;
+    width: 360px;
     border-right: 1px solid #D1D1D1;
  }
  .main{
