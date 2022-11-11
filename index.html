@@ -18,14 +18,21 @@
      </section>
   
      <div class="main">
-       <h1>Bienvenido a Notas</h1>
+       <!-- <h1>Bienvenido a Notas</h1> -->
         <form>
-          <div>
-            <label for="3"> Titulo</label>
-            <textarea name="new-note"
-              placeholder="Escriba su nota"
-            id="3" ></textarea> 
+          <div class="input">
+            <label for="3" class="content-xs overline">Titulo</label>
+            <div class="input__container">
+              <textarea
+                type="text"
+                placeholder="Write a note"
+                class="input__content"
+                id="3"
+                name="notes"
+              ></textarea>
+            </div>
           </div>
+  
               <button>Agregar</button>
         </form>  
          <div class="container">       
