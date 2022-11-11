@@ -3,7 +3,6 @@
 body{
 
     background: #1D2128;
-    ;
  }
  *{
     font-family: 'Roboto', sans-serif;
@@ -16,20 +15,10 @@ body{
     justify-content:space-around;
     flex-wrap: wrap; */
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
     gap: 2rem;
  }
 
- /* .briefcase-summary__header {
-   margin-bottom: 3rem;
-   text-align: center;
- } */
- 
- .briefcase-summary__content {
-   display: grid;
-   grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
-   gap: 2rem;
- }
  
  h1{
     text-align: center;
@@ -50,13 +39,21 @@ body{
     margin: 30px; */
  }
   
- textarea{
+ textarea, .title-notes{
     resize: none;
     border: none;
     outline: none;
-    width: 580px;
-    text-align: center;
-    font-size: 24px;
+}
+textarea{
+   width: 580px;
+   height: 50px;
+   text-align: center;
+   font-size: 24px;
+}
+
+.title-notes{
+   width: 580px;
+   font-size: 1.1rem;
 }
 
 form{
@@ -95,9 +92,11 @@ form{
  
  .section{
     display: flex;
+    height: 100vh;
  }
  .lateral{
-    width: 280px;
+    width: 360px;
+    border-right: 1px solid #D1D1D1;
  }
  .main{
   width: 100%;
@@ -119,5 +118,19 @@ form{
    padding: 1.5rem 4rem;
  }
  header{
+   padding: 1rem;
    height: 4.375rem;
+   border-bottom: 1px solid #D1D1D1;
+ }
+ .logo{
+width: 250px;
+ }
+
+ .content-welcome{
+   width: 500px;
+   display: flex;
+   gap: 1rem;
+ }
+ img{
+   object-fit: contain;
  }
