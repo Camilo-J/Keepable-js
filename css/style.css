@@ -1,3 +1,5 @@
+@import url(reset.css);
+
 body{
 
     background: #999B9E;
@@ -13,19 +15,11 @@ body{
     flex-direction:row;
     justify-content:space-around;
     flex-wrap: wrap;
-    
-    
  }
  
  
  h1{
     text-align: center;
-    
-    
- }
- form{
-    text-align: center;
-   
  }
  /*form button{
     position: relative;top: 20px;left: -120px;
@@ -42,59 +36,47 @@ body{
     position: relative;
     width: 17%;
     margin: 30px;
-           
-    
-    
-    
-   
  }
+  
  textarea{
+    resize: none;
     border: none;
     outline: none;
-    background-color: yellow;
+    width: 580px;
     text-align: center;
     font-size: 24px;
-    line-height: 60px;
-    box-sizing: border-box;
-    padding: 16px;
-    gap: 4px;
-    position: relative;
-    left: 120px;
- 
-    
-    
-    
-    border-radius: 20px;
-    
-    
-    
-    
-    
- }
- form button{
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form button{
     color: white;
     margin: 0px;
     width: 220px;
     height: 50px;
     background: #4F4F4F;
     border-radius: 16px;
-    position: relative;
+    /* position: relative;
     top: 40px;
     left: -240px;
     gap: 8px;
     position:relative;
     left: -130px;
-    
-    
- 
- 
- 
-    
-   
- 
- 
+     */
    
  }
+
+ .input{
+    width: 600px;
+    height: 150px;
+    border-radius: 8px;
+    background-color: #fff;
+}
+
  .nota button{
    color: gray;
     position: absolute;
@@ -102,23 +84,14 @@ body{
     left: 0;
     right: 0;
     border-radius: 16px;
-    
-    
- 
-    
  }
  .container-notas{
     justify-content: center;
  }
  
- 
- 
- 
  /*como centrar un boton absolute o un div*/
  
  .section{
- 
-    
     display: flex;
  }
  .lateral{
