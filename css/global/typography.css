@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+  --font-primary: 'Inter', sans-serif;
+}
+
+body {
+  font-size: 1.125rem;
+  line-height: 2rem;
+  font-family: var(--font-primary);
+  color: var(--primary-darker);
+  background-color: var(--gray-100);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-primary);
+}
+
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+}
+
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+}
+
+.text,
+.text-md {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.text-xs {
+  font-size: 0.75rem;
+  line-height: 1.5rem;
+}
+
+.head-3xl {
+  font-size: 4.5rem;
+  line-height: 4.5rem;
+}
+
+.head-2xl {
+  font-size: 3.75rem;
+  line-height: 3.75rem;
+}
+
+.head-xl {
+  font-size: 3rem;
+  line-height: 3rem;
+}
+
+.head-lg {
+  font-size: 2.25rem;
+  line-height: 2.25rem;
+}
+
+.head, 
+.head-md {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
+.head-sm {
+  font-size: 1.87rem;
+  line-height: 2.5rem;
+}
+
+.head-xs {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+/* Style part 2 */
+.font-form {
+  height: 16px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px
+}
+
+.overline {
+  font-size: 0.75rem;
+  line-height: 1rem;
+  letter-spacing: 0.125rem;
+  text-transform: uppercase;
+}
+
+.heading,
+.heading--md {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  font-weight: 600;
+  font-family: var(--font-secondary);
+}
+
+.heading--xxl {
+  font-size: 3.75rem;
+  line-height: 3.75rem;
+}
+
+.heading--xl {
+  font-size: 3rem;
+  line-height: 3rem;
+}
+
+.heading--lg {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+
+.heading--sm {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.heading--xs {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.content-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.content-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+.content-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.content-xs {
+  font-size: 0.75rem;
+  line-height: 1rem;
+}

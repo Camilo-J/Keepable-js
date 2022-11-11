@@ -1,0 +1,9 @@
+@import url("https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css");
+@import url("global/reset.css");
+
+@import url("global/typography.css");
+@import url("global/layouts.css");
+@import url("global/color.css");
+@import url("global/button.css");
+@import url("global/utils.css");
+@import url("global/input.css");

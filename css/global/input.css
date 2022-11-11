@@ -1,0 +1,116 @@
+.input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.input, 
+.input-container__input {
+  color: var(--green-900);
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--gray-700);
+  border-radius: 6px;
+  background-color: var(--white);
+
+  font-size: 1rem;
+  line-height: 1.75rem;
+  font-weight: 300;
+}
+
+.input::placeholder,
+.input-container__input::placeholder {
+  color: var(--gray-500);
+}
+
+.input:focus, 
+.select:focus, 
+.input-container__input:focus, 
+.radio__input:focus,
+.checkbox__input:focus {
+  outline: none;
+  /* border: 1px solid var(--gray-700); */
+  /* box-shadow: 0px 0px 4px var(--green-500); */
+  box-shadow: 0px 0px 0px 3px rgba(58, 130, 77, 0.6);
+}
+
+.input:invalid:not(:focus), 
+.input-container__input:invalid:not(:focus) {
+  border: 2px solid var(--red-500);
+  /* box-shadow: 0px 0px 4px var(--red-500); */
+}
+
+.input__error {
+  color: var(--red-500)
+}
+
+.input__help {
+  color: var(--gray-500)
+}
+
+/* SELECT */
+
+.select {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid var(--gray-700);
+  appearance: none;
+  background-image: url("../../icons/caret-down.svg");
+  background-repeat: no-repeat;
+  background-position: center right 12px;
+  background-size: 16px 16px;
+}
+
+.select:invalid {
+  border: 1px solid var(--red-500);
+}
+
+/* RADIO BUTTON */
+
+.radio, .checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.radio__input {
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border: 1px solid var(--gray-900);
+  border-radius: 8px;
+  margin: 2px;
+}
+
+.radio__input:checked {
+  border: 4px solid var(--green-600);
+}
+
+.radio__text-group, .checkbox__text-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.radio__label, .checkbox__label {
+  color: var(--green-900)
+}
+
+.radio__help, .checkbox__help {
+  color: var(--gray-500)
+}
+
+.checkbox__input {
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border: 1px solid var(--gray-900);
+  border-radius: 4px;
+  margin: 2px;
+}
+
+.checkbox__input:checked {
+  background-color: var(--primary-dark);
+  background-image: url("../../icons/check.svg");
+  background-position: center;
+  border-color: var(--primary-dark);
+}

@@ -1,0 +1,47 @@
+/* Layouts */
+
+/* Containers */
+
+.container-sm {
+  max-width: 640px;
+  padding: 0 16px;
+  margin: auto;
+}
+
+.container-md {
+  max-width: 768px;
+  padding: 16px 0;
+  margin: auto;
+}
+
+.container-lg {
+  max-width: 1024px;
+  padding: 0 16px;
+  margin: auto;
+}
+
+.container-xl {
+  max-width: 1248;
+  padding: 0 16px;
+  margin: auto;
+}
+
+/* Sections */
+
+.section-sm {
+  /* margin-top: 32px;
+  margin-bottom: 32px; */
+  margin: 32px 0;
+}
+
+.section-md {
+  margin: 48px 0;
+}
+
+.section-lg {
+  margin: 96px 0;
+}
+
+.section-xl {
+  margin: 144px 0;
+}
