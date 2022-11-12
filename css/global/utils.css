@@ -126,3 +126,7 @@ textarea{
 .mb-4 {
   margin-bottom: 1rem;
 }
+
+.border-gray{
+  border: 1px solid gray;
+}
