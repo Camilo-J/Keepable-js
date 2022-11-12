@@ -6,3 +6,17 @@
 @import url("global/color.css");
 @import url("global/utils.css");
 @import url("global/input.css");
+
+body{
+
+    background: #1D2128;
+ }
+ *{
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+ }
+
+ svg{
+    width: 2.25rem;
+    height: 2.25rem;
+  }
