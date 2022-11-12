@@ -58,3 +58,13 @@ const moveToMain = (indice) => {
 };
 
 renderNotas();
+const getColor = () => {
+  const palete = document.querySelector(".colors");
+
+  palete.addEventListener("click", (event) => {
+    const color = event.target.className.split(" ");
+    // const color = window.getComputedStyle(event.target).backgroundColor;
+    console.log(color);
+  });
+};
+getColor();
