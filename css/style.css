@@ -4,9 +4,7 @@
  .container{
     margin: 32px 0;
     text-align: center;
-    /* display:flex;
-    justify-content:space-around;
-    flex-wrap: wrap; */
+    padding: 0;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
     gap: 2rem;
@@ -16,20 +14,16 @@
  h1{
     text-align: center;
  }
- /*form button{
-    position: relative;top: 20px;left: -120px;
- }*/
+
  .nota{
-    background-color: yellow;
+    background-color: white;
     border: 1px solid white;
     height: 260px;
-    /*width: 200px;*/
     border-radius: 20px;
     font-weight: 400;
-    /* position: relative; */
-    /*font-size: 24px;
-    width: 17%;
-    margin: 30px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
  }
   
  textarea, .title-notes{
@@ -111,7 +105,7 @@ form{
    padding: .2rem;
    background: #1D2128;
    border-radius: 4px;
-   display: flex;
+   display: none;
    justify-content: space-between;
    flex-wrap: wrap;
  }
@@ -124,9 +118,10 @@ form{
  }
 
  .colors-opened{
+  display: flex;
    position:  absolute;
-   top: 7.7rem;
-   left: 47.3rem;
+   top: 25.7rem;
+   left: 20.3rem;
  }
 
  .color1{
