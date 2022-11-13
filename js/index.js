@@ -1,6 +1,6 @@
 let notas = [
-  { title: "Nota 4", content: "Ir a nadar" },
-  { title: "Nota 5", content: "Ir al gym" },
+  { title: "Nota 4", content: "Ir a nadar", color: "color2" },
+  { title: "Nota 5", content: "Ir al gym", color: "color4" },
 ];
 
 let papelera = [];
@@ -93,6 +93,7 @@ function crearNota(nota) {
   // END SVG
   divNota.className = "nota";
   divNota.append(title, content, divColor, svg);
+  divNota.classList.add(`${nota.color}`);
   li.append(divNota);
   // console.log(li);
   displayPalette(svg);
