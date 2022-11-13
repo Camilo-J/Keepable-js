@@ -39,18 +39,18 @@
       <!-- <h1>Bienvenido a Notas</h1> -->
       <form>
         <div class="input">
-          <input class="title-notes" id="title" type="text" placeholder="The title for my note"></label>
+        <label for="title"><input class="title-notes" id="title" type="text" placeholder="The title for my note"></label>
           <div class="input__container">
-            <textarea type="text" placeholder="Write a note" class="input__content" id="3" name="new-note"></textarea>
+        <label for="content">    <textarea type="text" placeholder="Write a note" class="input__content" id="content" name="new-note"></textarea></label>
           </div>
           <div class="input__footer">
             <div class="icons">
               <svg>
-                <use xlink:href="#palette" />
+                <use xlink:href="#palette" />         
               </svg>
             </div>
             <!-- <a class="create-note" href="">Keep it!</a> -->
-            <button>Keep it!</button>
+            <button class="btn_add">Keep it!</button>
           </div>
           <div class="colors colors-opened">
             <div class="color border-gray color1"></div>
@@ -71,28 +71,22 @@
       <div class="main__notes">
         <div class="container">
           <div class="container-notas">
+            <ul>
+            <li>
             <div class="nota">
-              <p class="text-sm overline">Title</p>
-              <!-- <div class="input__container">
-                  <p>Nota 1</p>
-                </div>
-                <div class="input__footer">
-                  <div class="icons">
-                    <svg><use xlink:href="#palette"/></svg>
-                  </div>
-                  <button>Eliminar</button>
-                </div> -->
+              <p>Nota 1</p>
+              <p>Ir al parque</p>
+              <button class="delete">Eliminar</button>
             </div>
-
+           </li>
+           <li>
             <div class="nota">
               <p>Nota 2</p>
-              <button>Eliminar</button>
+              <p>Entregar Guitarra</p>
+              <button class="delete">Eliminar</button>
             </div>
-
-            <div class="nota">
-              <p>Nota 3</p>
-              <button>Eliminar</button>
-            </div>
+          </li>
+            </ul>
           </div>
         </div>
       </div>
