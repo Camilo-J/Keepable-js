@@ -8,8 +8,7 @@ body {
   font-size: 1.125rem;
   line-height: 2rem;
   font-family: var(--font-primary);
-  color: var(--primary-darker);
-  background-color: var(--gray-100);
+  color: black;
 }
 
 h1,

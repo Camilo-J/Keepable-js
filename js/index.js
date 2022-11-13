@@ -105,6 +105,7 @@ function handleSubmit(event) {
 
   notas.push(newNote);
   createExpense(notas);
+  event.target.reset();
   renderNotas(notas);
 }
 
