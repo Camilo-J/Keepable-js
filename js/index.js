@@ -1,15 +1,17 @@
-let notas = [
+let papelera = [];
+
+let initNotas = [
   { title: "Nota 4", content: "Ir a nadar", color: "color2" },
   { title: "Nota 5", content: "Ir al gym", color: "color4" },
 ];
 
-let papelera = [];
+let notas = JSON.parse(localStorage.getItem("notas")) || initNotas;
 
-// const input = document.querySelector("input");
-// let addBtn = document.querySelector(".btn_add");
-// const ul = document.querySelector("ul");
+const createExpense = (notas) => {
+  localStorage.setItem("notas", JSON.stringify(notas));
+};
 
-const getColor = (palete) => {
+const getColor = (palete, nota) => {
   return palete.addEventListener("click", (event) => {
     let class_element = event.target.className.split(" ");
     let color = class_element[1];
@@ -17,43 +19,30 @@ const getColor = (palete) => {
     if (class_element.length > 2) color = class_element[2];
     // const color = window.getComputedStyle(palete).backgroundColor;
     console.log(color);
-    //  .style.background = color;
+    nota.color = color;
+    createExpense(notas, nota);
+
     palete.parentElement.className = `nota ${color}`;
   });
 };
 
-function displayPalette(iconPalette) {
+function displayPalette(iconPalette, nota) {
   return iconPalette.addEventListener("click", (event) => {
     const colorsPalette = iconPalette.parentElement.children[2];
-    console.log(iconPalette.parentElement.children[2]);
+    // console.log(iconPalette.parentElement.children[2]);
     // console.log(eve);
     colorsPalette.classList.toggle("colors-opened");
-    getColor(colorsPalette);
-
-    // changeColor();
+    getColor(colorsPalette, nota);
   });
 }
 
-// addBtn.addEventListener("click",(e)=> {
-//     e.preventDefault();
-//     let text = input.value;
-
-//     let li = document.createElement("li");
-//     const title = document.createElement("p");
-//     const content = document.createElement("p");
-//     // creo div y pusheo 1 por 1
-//     title.textContent = text;
-//     li.appendChild(content);
-//     ul.appendChild(li);
-
-// });
-
 function renderNotas(notas) {
   const ul = document.querySelector("ul");
+  ul.innerHTML = "";
   // ul.innerHTML = "";
   for (const nota of notas) {
     let notaEl = crearNota(nota);
-    console.log(notaEl);
+    // console.log(notaEl);
     ul.append(notaEl);
   }
 }
@@ -96,7 +85,7 @@ function crearNota(nota) {
   divNota.classList.add(`${nota.color}`);
   li.append(divNota);
   // console.log(li);
-  displayPalette(svg);
+  displayPalette(svg, nota);
   return li;
 }
 
@@ -111,23 +100,12 @@ function handleSubmit(event) {
   const newNote = {
     title: data.title.value,
     content: data.content.value,
+    // color: data.color.value,
   };
 
   notas.push(newNote);
+  createExpense(notas);
   renderNotas(notas);
 }
-
-// const getColor = () => {
-//   const palete = document.querySelector(".colors");
-
-//   return palete.addEventListener("click", (event) => {
-//     const color = event.target.className.split(" ")[1];
-//     // const color = window.getComputedStyle(event.target).backgroundColor;
-//     console.log(color);
-//     return color;
-//   });
-// };
-
-// getColor();
 
 renderNotas(notas);
