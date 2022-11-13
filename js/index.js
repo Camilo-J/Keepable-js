@@ -96,6 +96,7 @@ let papelera = []
 
 function renderNotas(notas) {
   const ul = document.querySelector("ul");
+  // ul.innerHTML = "";
   for (const nota of notas) {
     let notaEl = crearNota(nota);
     ul.append(notaEl);
@@ -114,6 +115,25 @@ function crearNota(nota) {
   li.append(divNota);
   return li;
 }
+
+const form = document.querySelector("form");
+form.addEventListener("submit",handleSubmit);
+
+function handleSubmit(event){
+  event.preventDefault();
+  
+  
+  const data = event.target.elements;
+  
+  const newNote = {
+    title: data.title.value,
+    content: data.content.value,
+  };
+
+notas.push(newNote);
+renderNotas(notas);
+}
+
 
 const getColor = () => {
   const palete = document.querySelector(".colors");
