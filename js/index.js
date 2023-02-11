@@ -27,12 +27,14 @@ const getColor = (palete, nota) => {
 };
 
 function displayPalette(iconPalette, nota) {
-  return iconPalette.addEventListener("click", (event) => {
-    const colorsPalette = iconPalette.parentElement.children[2];
-    // console.log(iconPalette.parentElement.children[2]);
-    // console.log(eve);
-    colorsPalette.classList.toggle("colors-opened");
+  const colorsPalette = iconPalette.parentElement.childNodes[2]; //iconPalette.parentElement.children[2];
+  iconPalette.addEventListener("mouseover", () => {
+    colorsPalette.classList.add("colors-opened");
     getColor(colorsPalette, nota);
+  });
+
+  colorsPalette.addEventListener("mouseleave", () => {
+    colorsPalette.classList.remove("colors-opened");
   });
 }
 
@@ -79,6 +81,7 @@ function crearNota(nota) {
   use.setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "#palette");
   svg.classList.add("svg");
   svg.append(use);
+  // svg.setAttribute("id","palette")
   // END SVG
   divNota.className = "nota";
   divNota.append(title, content, divColor, svg);
