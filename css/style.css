@@ -1,156 +1,157 @@
 @import url(global.css);
 @import url(components/header.css);
 @import url(components/sidebar.css);
- .container{
-    margin: 32px 0;
-    text-align: center;
-    padding: 0;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
-    gap: 2rem;
- }
-
- 
- h1{
-    text-align: center;
- }
-
- .nota{
-    background-color: white;
-    border: 1px solid white;
-    height: 260px;
-    border-radius: 20px;
-    font-weight: 400;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
- }
-  
- textarea, .title-notes{
-    resize: none;
-    border: none;
-    outline: none;
-}
-textarea{
-   width: 580px;
-   height: 50px;
-   text-align: center;
-   font-size: 24px;
+.container {
+  margin: 32px 0;
+  text-align: center;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+  gap: 2rem;
 }
 
-.title-notes{
-   width: 580px;
-   font-size: 1.1rem;
+h1 {
+  text-align: center;
 }
 
-form{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.nota {
+  position: relative;
+  background-color: white;
+  border: 1px solid white;
+  height: 260px;
+  width: 260px;
+  border: none;
+  border-radius: 20px;
+  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
- button{
-    border-radius: 16px white;
-    all: unset;
-    cursor: pointer;
-    padding:.2rem ;
- }
-
- .input{
-    width: 600px;
-    height: 150px;
-    border-radius: 8px;
-    background-color: #fff;
+textarea,
+.title-notes {
+  resize: none;
+  border: none;
+  outline: none;
+}
+textarea {
+  width: 580px;
+  height: 50px;
+  text-align: center;
+  font-size: 24px;
 }
 
- .nota button{
-   color: gray;
-    /* position: absolute; */
-    /* bottom: -40px;
+.title-notes {
+  width: 580px;
+  font-size: 1.1rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+button {
+  border-radius: 16px white;
+  all: unset;
+  cursor: pointer;
+  padding: 0.2rem;
+}
+
+.input {
+  width: 600px;
+  height: 150px;
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+.nota button {
+  color: gray;
+  /* position: absolute; */
+  /* bottom: -40px;
     left: 0;
     right: 0; */
-    border-radius: 16px;
- }
- .container-notas{
-    justify-content: center;
- }
- 
- /*como centrar un boton absolute o un div*/
- 
+  border-radius: 16px;
+}
+.container-notas {
+  justify-content: center;
+}
 
- .main{
+/*como centrar un boton absolute o un div*/
+
+.main {
   width: 100%;
- }
- .hidden{
-    display: none;
- }
+}
+.hidden {
+  display: none;
+}
 
- .input__footer{
-   display: flex;
-   justify-content: space-between;
- }
-
-
- .main__notes{
-   padding: 1.5rem 4rem;
- }
-
- .option-selected{
-   background: gray;
- }
-
- .colors{
-   width:9.68rem;
-   height: 4.06rem;
-   padding: .2rem;
-   background: #1D2128;
-   border-radius: 4px;
-   display: none;
-   justify-content: space-between;
-   flex-wrap: wrap;
- }
-
- .color{
- width: 1.56rem;
- height: 1.56rem;
- border-radius: 100px;
- background-color: aqua;
- }
-
- .colors-opened{
+.input__footer {
   display: flex;
-   position:  absolute;
-   top: 25.7rem;
-   left: 20.3rem;
- }
+  justify-content: space-between;
+}
 
- .color1{
-   background-color: #FFFFFF;
- }
- .color2{
-   background-color: #F28B82;
- }
- .color3{
-   background-color: #FBBC04;
- }
- .color4{
-   background-color:  #FFF475;
- }
- .color5{
-   background-color: #CCFF90;
- }
- .color6{
-   background-color: #A7FFEB;
- }
- .color7{
-   background-color: #CBF0F8;
- }
- .color8{
-   background-color: #AECBFA;
- }
- .color9{
-   background-color: #D7AEFB;
- }
- .color10{
-   background-color: #FDCFE8;
- }
+.main__notes {
+  padding: 1.5rem 4rem;
+}
+
+.option-selected {
+  background: gray;
+}
+
+.colors {
+  width: 9.68rem;
+  height: 4.06rem;
+  padding: 0.2rem;
+  background: #1d2128;
+  border-radius: 4px;
+  display: none;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.color {
+  width: 1.56rem;
+  height: 1.56rem;
+  border-radius: 100px;
+  background-color: aqua;
+}
+
+.colors-opened {
+  display: flex;
+  position: absolute;
+  bottom: 4.2rem;
+  left: -2rem;
+}
+
+.color1 {
+  background-color: #ffffff;
+}
+.color2 {
+  background-color: #f28b82;
+}
+.color3 {
+  background-color: #fbbc04;
+}
+.color4 {
+  background-color: #fff475;
+}
+.color5 {
+  background-color: #ccff90;
+}
+.color6 {
+  background-color: #a7ffeb;
+}
+.color7 {
+  background-color: #cbf0f8;
+}
+.color8 {
+  background-color: #aecbfa;
+}
+.color9 {
+  background-color: #d7aefb;
+}
+.color10 {
+  background-color: #fdcfe8;
+}
