@@ -30,8 +30,13 @@ svg {
   transform: scale(0.8);
 }
 
-svg:hover {
+.svg:hover {
   background-color: #999b9e;
   fill: #fff;
   color: white;
+}
+
+.notas__icons {
+  display: flex;
+  gap: 0.5rem;
 }
