@@ -35,7 +35,7 @@ function TrashPage() {
     `;
   }
 
-  function renderNotas() {
+  function renderTrashNotes() {
     return notas.map((nota) => crearNota(nota));
   }
 
@@ -44,7 +44,7 @@ function TrashPage() {
   <div>
   <div class="container-notas">
     <ul class="container">
-    ${renderNotas().join("")}
+    ${renderTrashNotes().join("")}
     </ul>
   </div>
   </div>

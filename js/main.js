@@ -5,7 +5,7 @@ import TrashPage from "./trashPage.js";
 
 function Main() {
   const template = `
-${SideBar()}
+    ${SideBar()}
     <section class="main py-1">
       <!-- <h1>Bienvenido a Notas</h1> -->
       ${
@@ -13,7 +13,7 @@ ${SideBar()}
           ? `${Form()}
       <div class="main__notes">
       </div>`
-          : { TrashPage }
+          : TrashPage()
       }
       </section>
       `;
