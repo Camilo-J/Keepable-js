@@ -28,7 +28,15 @@ let initNotas = [
 const STORE = {
   currentPage: JSON.parse(localStorage.getItem("currentPage")) || "homePage",
   notes: JSON.parse(localStorage.getItem("notas")) || initNotas,
-  trashNotes: JSON.parse(localStorage.getItem("trashNotas")) || [],
+  trashNotes: JSON.parse(localStorage.getItem("trashNotas")) || [
+    {
+      id: nextId.newId(),
+      title: "Nota trash",
+      content: "Ir a nadar",
+      color: "color2",
+      pinned: false,
+    },
+  ],
   changeColor(noteId, color) {
     let nota = this.notes.find((nota) => nota.id === Number.parseInt(noteId));
     nota.color = color;
@@ -42,6 +50,22 @@ const STORE = {
   changeCurrentPage(value) {
     this.changeCurrentPage = value;
     localStorage.setItem("currentPage", JSON.stringify(value));
+  },
+  moveToTrash(id) {
+    let note = this.notes.find((note) => note.id === Number.parseInt(id));
+    console.log(note);
+    this.notes = this.notes.filter((note) => note.id !== Number.parseInt(id));
+    this.trashNotes.push(note);
+    localStorage.setItem("trashNotas", JSON.stringify(this.trashNotes));
+    localStorage.setItem("notas", JSON.stringify(this.notes));
+  },
+  recoverNotes(id) {
+    let note = this.trashNotes.find((note) => note.id === Number.parseInt(id));
+    this.trashNotes = this.trashNotes.filter(
+      (note) => note.id !== Number.parseInt(id)
+    );
+    this.notes.push(note);
+    localStorage.setItem("notas", JSON.stringify(this.notes));
   },
 };
 

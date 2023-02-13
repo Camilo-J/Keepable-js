@@ -1,3 +1,4 @@
+import DomHandler from "../DomHanlder.js";
 import STORE from "../store.js";
 
 const CardView = () => {
@@ -72,12 +73,23 @@ const CardView = () => {
     });
   }
 
-  function listenerPalette() {
+  function moveNoteToTrash(icon, nota) {
+    let id = nota.closest("li").id.split("-")[1];
+    let Cards = DomHandler(".main__notes");
+    icon.addEventListener("click", () => {
+      STORE.moveToTrash(id);
+      Cards.load(CardView());
+    });
+  }
+
+  function noteListeners() {
     let notes = document.querySelectorAll(".nota");
 
     notes.forEach((note) => {
       let svgNote = note.lastElementChild.firstElementChild;
+      let trashIcon = note.lastElementChild.lastElementChild;
       displayPalette(svgNote, note);
+      moveNoteToTrash(trashIcon, note);
     });
   }
 
@@ -86,7 +98,7 @@ const CardView = () => {
       return template;
     },
     addListeners() {
-      listenerPalette();
+      noteListeners();
     },
   };
 };
