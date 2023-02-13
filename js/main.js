@@ -23,6 +23,7 @@ function Main() {
     },
     addListeners() {
       if (STORE.currentPage === "homePage") Form().addListeners();
+      if (STORE.currentPage === "trashPage") TrashPage().addListeners();
       SideBar().addListeners();
     },
   };

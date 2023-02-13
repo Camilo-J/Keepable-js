@@ -1,4 +1,6 @@
+import DomHandler from "../DomHanlder.js";
 import STORE from "../store.js";
+import Main from "./main.js";
 
 function TrashPage() {
   let notas = STORE.trashNotes;
@@ -50,11 +52,33 @@ function TrashPage() {
   </div>
   </div>`;
 
+  function addFunctionListener(icon, id, action) {
+    let main = DomHandler("#root");
+    icon.addEventListener("click", () => {
+      action === "delete" ? STORE.deleteNotes(id) : STORE.recoverNotes(id);
+      main.load(Main());
+    });
+  }
+
+  function noteTrashListeners() {
+    let notes = document.querySelectorAll(".nota");
+    notes.forEach((note) => {
+      let id = note.closest("li").id.split("-")[1];
+      let trashIcon = note.lastElementChild.firstElementChild;
+      let recoverIcon = note.lastElementChild.lastElementChild;
+
+      addFunctionListener(trashIcon, id, "delete");
+      addFunctionListener(recoverIcon, id, "recover");
+    });
+  }
+
   return {
     toString() {
       return template;
     },
-    addListeners() {},
+    addListeners() {
+      noteTrashListeners();
+    },
   };
 }
 
