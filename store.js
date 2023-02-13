@@ -74,6 +74,11 @@ const STORE = {
     );
     localStorage.setItem("trashNotas", JSON.stringify(this.trashNotes));
   },
+  changePinnedValue(id) {
+    let foundNote = this.notes.find((note) => note.id === Number.parseInt(id));
+    foundNote.pinned = !foundNote.pinned;
+    localStorage.setItem("notas", JSON.stringify(this.notes));
+  },
 };
 
 export default STORE;

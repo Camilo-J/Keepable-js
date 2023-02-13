@@ -44,3 +44,9 @@ svg {
   display: flex;
   gap: 0.5rem;
 }
+
+.pinnedIcon {
+  position: absolute;
+  top: 0.4rem;
+  right: 0.5rem;
+}
