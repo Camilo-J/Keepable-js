@@ -50,3 +50,8 @@ svg {
   top: 0.4rem;
   right: 0.5rem;
 }
+
+.pinned {
+  transform: rotate(45deg);
+  fill: rgb(195, 195, 73);
+}

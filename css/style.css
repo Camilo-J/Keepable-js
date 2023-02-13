@@ -2,12 +2,11 @@
 @import url(components/header.css);
 @import url(components/sidebar.css);
 .container {
-  margin: 32px 0;
+  margin: 1rem 0;
   padding: 0;
   display: grid;
   grid-template-columns: repeat(auto-fill, 260px);
   gap: 2rem;
-  justify-content: center;
 }
 
 h1 {
@@ -93,7 +92,7 @@ button {
 }
 
 .main__notes {
-  padding: 1.5rem 4rem;
+  padding: 0.5rem 4rem;
 }
 
 .option-selected {
@@ -154,4 +153,23 @@ button {
 }
 .color10 {
   background-color: #fdcfe8;
+}
+
+@media screen and (max-width: 1000px) {
+  .input,
+  textarea,
+  .title-notes {
+    width: auto;
+  }
+  .input {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .container {
+    justify-content: center;
+  }
 }
