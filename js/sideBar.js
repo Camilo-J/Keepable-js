@@ -1,4 +1,6 @@
+import DomHandler from "../DomHanlder.js";
 import STORE from "../store.js";
+import Main from "./main.js";
 
 function SideBar() {
   const template = `
@@ -19,12 +21,15 @@ function SideBar() {
     `;
   function goListener() {
     const links = document.querySelectorAll(".lateral__links");
+    let main = DomHandler("#root");
     links.forEach((link) => {
       link.addEventListener("click", () => {
         // STORE
         console.log("funcionando");
         console.log(link.id);
         STORE.changeCurrentPage(link.id);
+
+        main.load(Main());
       });
     });
   }

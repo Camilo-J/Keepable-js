@@ -48,7 +48,7 @@ const STORE = {
     localStorage.setItem("notas", JSON.stringify(this.notes));
   },
   changeCurrentPage(value) {
-    this.changeCurrentPage = value;
+    this.currentPage = value;
     localStorage.setItem("currentPage", JSON.stringify(value));
   },
   moveToTrash(id) {
