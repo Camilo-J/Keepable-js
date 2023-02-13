@@ -66,6 +66,13 @@ const STORE = {
     );
     this.notes.push(note);
     localStorage.setItem("notas", JSON.stringify(this.notes));
+    localStorage.setItem("trashNotas", JSON.stringify(this.trashNotes));
+  },
+  deleteNotes(id) {
+    this.trashNotes = this.trashNotes.filter(
+      (note) => note.id !== Number.parseInt(id)
+    );
+    localStorage.setItem("trashNotas", JSON.stringify(this.trashNotes));
   },
 };
 
