@@ -166,10 +166,16 @@ button {
     flex-direction: column;
     justify-content: space-between;
   }
+  .main {
+    min-height: 100vh;
+  }
 }
 
 @media screen and (max-width: 650px) {
   .container {
     justify-content: center;
+  }
+  .main {
+    min-height: 100vh;
   }
 }

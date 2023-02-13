@@ -9,13 +9,13 @@ function SideBar() {
       <svg>
         <use xlink:href="#keys" />
       </svg>
-      Notes
+      <p>Notes</p>
     </a>
     <a href="#" class="lateral__links" id="trashPage">
       <svg>
         <use xlink:href="#trashSidebar" />
       </svg>
-      Trash
+      <p>Trash</p>
     </a>
   </section>
     `;

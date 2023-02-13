@@ -7,15 +7,15 @@ const CardView = () => {
     if (option === "notpinned")
       return notas
         .filter((note) => note.pinned === false)
-        .map((nota) => crearNota(nota));
+        .map((nota) => crearNota(nota, option));
 
     if (option === "pinned")
       return notas
         .filter((note) => note.pinned === true)
-        .map((nota) => crearNota(nota));
+        .map((nota) => crearNota(nota, option));
   }
 
-  function crearNota(nota) {
+  function crearNota(nota, option) {
     return `
     <li id="nota-${nota.id}">
       <div class="nota ${nota.color}">
@@ -38,7 +38,7 @@ const CardView = () => {
         <div class="notas__icons"><svg class="svg">
             <use xlink:href="#palette"></use>
           </svg>
-          <svg class="svg pinnedIcon">
+          <svg class="svg pinnedIcon ${option === "pinned" ? "pinned" : ""}">
             <use xlink:href="#pinned"></use>
           </svg>
           <svg class="svg scale08">
