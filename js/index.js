@@ -1,7 +1,7 @@
 import CardView from "./cardView.js";
-import DomHandler from "../DomHanlder.js";
+import DomHandler from "./DomHanlder.js";
 import Main from "./main.js";
-import STORE from "../store.js";
+import STORE from "./store.js";
 
 let main = DomHandler("#root");
 main.load(Main());

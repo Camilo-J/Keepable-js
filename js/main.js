@@ -1,4 +1,4 @@
-import STORE from "../store.js";
+import STORE from "./store.js";
 import Form from "./form.js";
 import SideBar from "./sideBar.js";
 import TrashPage from "./trashPage.js";

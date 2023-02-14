@@ -1,5 +1,5 @@
-import DomHandler from "../DomHanlder.js";
-import STORE from "../store.js";
+import DomHandler from "./DomHanlder.js";
+import STORE from "./store.js";
 
 const CardView = () => {
   let notas = STORE.notes;

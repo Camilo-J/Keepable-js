@@ -1,5 +1,5 @@
-import DomHandler from "../DomHanlder.js";
-import STORE from "../store.js";
+import DomHandler from "./DomHanlder.js";
+import STORE from "./store.js";
 import CardView from "./cardView.js";
 
 function Form() {
